@@ -13,3 +13,35 @@
  *= require_tree .
  *= require_self
  */
+
+@import url("components/button.css");
+@import url("components/card.css");
+@import url("components/banner.css");
+@import url("components/navbar.css");
+
+h1{
+  margin-top: 12px !important;
+  margin-bottom: 12px !important;
+}
+
+h2{
+  font-size: 24px !important;
+  margin-bottom: 12px !important;
+}
+
+h4{
+  margin-bottom: 12px !important;
+}
+
+#flat-address{
+  margin-bottom: 16px !important;
+}
+
+#empty-box{
+  height: 50px;
+}
+
+#flat-details{
+  height: 300px;
+  padding: 20px;
+}

@@ -1,0 +1,23 @@
+<div class="banner position-relative" style="background-image: url(https://www.thestatesman.com/wp-content/uploads/2020/04/googl_ED.jpg);">
+  <div class="container">
+    <div class="flat-card position-absolute top-100 start-50 translate-middle" id="flat-informations">
+      <h1><%= @flat.description %></h1>
+      <h4><%= @flat.address %></h4>
+    </div>
+  </div>
+</div>
+<div id="empty-box"></div>
+<div class="container d-flex justify-content-center mt-5">
+  <div class="flat-card" id="flat-details">
+    <h2>Details</h2>
+    <div class="d-flex align-items-center">
+      <p class="card-text p-0"><%= @flat.price_per_night %></p>
+      <i class="fa-solid fa-euro-sign"></i>
+    </div>
+    <div class="d-flex align-items-center">
+      <p class="card-text"><%= @flat.number_of_guests %></p>
+      <i class="fa-solid fa-users"></i>
+    </div>
+      <p class="card-text"><%= @flat.name %></p>
+  </div>
+</div>

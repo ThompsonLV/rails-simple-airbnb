@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>All your flats</h1>
+  <h2><%= @flats.count %> flats</h3>
+  <h3><%= link_to "Create a flat", new_flat_path, class: "btn btn-ghost" %></h3>
+
+  <div class="cards">
+    <% @flats.each do |flat|%>
+      <div class="card shadow-sm" style="width: 24rem;">
+        <img src="https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fit,w_730,h_487/at%2Fhouse%20tours%2F2021-04%2FErin%20K%2FKERR-130-CLARKSON-2R-01-020577-EDIT-WEB" class="img-fluid" alt="...">
+        <div class="card-body">
+          <h2 class="card-title"><%= flat.description%> </h2>
+          <p class="card-text" id="flat-address"><%= flat.address %></p>
+          <div class="d-flex align-items-center">
+          <p class="card-text p-0"><%= flat.price_per_night %></p>
+            <i class="fa-solid fa-euro-sign"></i>
+          </div>
+          <div class="d-flex align-items-center">
+            <p class="card-text"><%= flat.number_of_guests %></p>
+            <i class="fa-solid fa-users"></i>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between border-top" id="more">
+          <p class="m-0 p-3" id="button-more"><%= link_to 'More info', flat_path(flat) %></p>
+          <p class="m-0 p-3" id="button-delete"><%= link_to "Delete", flat_path(flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %> </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
