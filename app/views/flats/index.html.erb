@@ -21,6 +21,7 @@
         </div>
         <div class="d-flex justify-content-between border-top" id="more">
           <p class="m-0 p-3" id="button-more"><%= link_to 'More info', flat_path(flat) %></p>
+          <p class="m-0 p-3" id="button-edit"><%= link_to 'Update flat', edit_flat_path(flat) %></p>
           <p class="m-0 p-3" id="button-delete"><%= link_to "Delete", flat_path(flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %> </p>
         </div>
       </div>

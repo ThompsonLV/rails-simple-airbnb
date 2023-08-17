@@ -27,7 +27,7 @@ class FlatsController < ApplicationController
 
   def update
     @flat = Flat.find(params[:id])
-    @flat.update(params[:flat])
+    @flat.update(flat_params)
   end
 
   def destroy
